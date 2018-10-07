@@ -2,7 +2,6 @@ body {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background: #ededed;
     position: relative;
 }
 
@@ -17,45 +16,35 @@ body {
 .pagination-ellipsis, .pagination-link, 
 .pagination-next, .pagination-previous, 
 .select select, .textarea {
-    border-radius: 3px;
     transition: all .5s;
 }
 
-.button.is-hovered, .button:hover {
-    border: none;
+.button.is-hovered, .button:hover,
+.box.button.is-hovered, .box:hover {
     box-shadow: 0 14px 26px -12px rgba(0,35,255,0.42),0 4px 23px 0px rgba(0,0,0,0.12),0 8px 10px -5px rgba(0,35,255,0.2) !important;
     opacity: 0.9 0.5;
-}
-
-.has-primary-background {
-    background: #0023FF !important;
-    background-color: #0023FF !important;
-}
-
-.has-primary-button {
-    width: 8rem !important;
-    background-color: #0023FF !important;
+    transition: all .5s;
 }
 
 /**
-    Login
+    Auth
 **/
-.login-wrapper {
+.auth-wrapper {
     height: 100%;
     min-height: 100vh;
     background: #fff;
     transition: all .3s;
 }
 
-.login-logo {
+.auth-logo {
     margin: .5rem;
 }
 
-.login-form-wrapper {
+.auth-form-wrapper {
     padding: 3rem 1.5rem;
 }
 
-.login-form-nav {
+.auth-form-nav {
     margin: 2rem 0 2rem 0;
 }
 
@@ -67,6 +56,62 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/**
+    Main Navbar
+**/
+.main-navbar {
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: calc(100% - 80px);
+    margin-left: 80px;
+    background-color: #fff;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.02);
+    z-index: 9;
+    transition: all .3s;
+}
+
+.main-navbar .navbar-brand {
+    width: auto;
+    height: 80px;
+    display: flex;
+    float: left;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-navbar .navbar-brand a {
+    padding-left: 2rem;
+}
+
+.main-navbar .navbar-inner {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.main-navbar .navbar-inner .icon-menu li {
+    float: right;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-navbar .navbar-inner .icon-menu li a {
+    display: block;
+    position: relative;
+    max-height: 20px;
+    transform: rotate(0);
+    opacity: 1;
+    transition: all .3s;
+}
+
+.main-navbar .navbar-inner .icon-menu li a span :hover {
+    color: #0023FF !important;
 }
 
 /**
@@ -91,8 +136,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fcfcfc;
-    border-right: 1px solid #ededed;
 }
 
 .main-sidebar .sidebar-brand img {
@@ -106,8 +149,7 @@ body {
     position: relative;
 }
 
-.main-sidebar .sidebar-inner .icon-menu li, 
-.main-sidebar .sidebar-inner .bottom-menu li {
+.main-sidebar .sidebar-inner .icon-menu li {
     width: 80px;
     height: 80px;
     display: flex;
@@ -115,8 +157,7 @@ body {
     justify-content: center;
 }
 
-.main-sidebar .sidebar-inner .icon-menu li a, 
-.main-sidebar .sidebar-inner .bottom-menu li a {
+.main-sidebar .sidebar-inner .icon-menu li a {
     display: block;
     position: relative;
     max-height: 20px;
@@ -125,46 +166,36 @@ body {
     transition: all .3s;
 }
 
-.main-sidebar .sidebar-inner .icon-menu li a span :hover, 
-.main-sidebar .sidebar-inner .bottom-menu li a span :hover {
-    color: #3273dc !important;
-}
-
-.main-sidebar .sidebar-inner .bottom-menu {
-    position: absolute;
-    bottom: 80px;
-    padding: 0;
+.main-sidebar .sidebar-inner .icon-menu li a span :hover {
+    color: #0023FF !important;
 }
 
 /**
     Main Wrapper
 **/
 .main-wrapper {
-    height: 100%;
+    height: calc(100% -80px);
     min-height: 100vh;
     width: calc(100% - 80px);
-    margin-left: 80px;
+    margin: 80px 0 0 80px;
     position: relative;
-    background: #f0f0f0;
+    background: hsl(0, 0%, 96%);
     transition: all .3s;
 }
 
-/**
-    Account
-**/
-.account-header {
-    margin: 1rem 0 3rem 0;
+.main-header {
+    margin: 0 0 2rem 0;
 }
 
 /**
     Mobile
 **/
 @media (max-width: 768px) {
-    .login-logo {
+    .auth-logo {
         margin: 0;
     }   
 
-    .login-form-wrapper {
+    .auth-form-wrapper {
         padding: 0 1.5rem;
     }
 }
