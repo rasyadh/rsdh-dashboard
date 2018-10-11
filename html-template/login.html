@@ -59,16 +59,16 @@
                     <div class="form-wrapper">
                         <!--Form Login-->
                         <form class="form" id="form-login">
-                            <div class="field">
+                            <div class="field" id="field-email">
                                 <label class="label has-text-weight-light">Email*</label>
                                 <div class="control">
-                                    <input class="input" type="email" autofocus />
+                                    <input class="input" type="email" id="email" autofocus required />
                                 </div>
                             </div>
-                            <div class="field">
+                            <div class="field" id="field-password">
                                 <label class="label has-text-weight-light">Password*</label>
                                 <div class="control">
-                                    <input class="input" type="password" />
+                                    <input class="input" type="password" id="password" required />
                                 </div>
                             </div>
                             <div class="field">
@@ -80,32 +80,31 @@
                                 </div>
                             </div>
                             <div class="submit-wrapper">
-                                <a class="button is-primary is-uppercase has-text-white has-text-weight-light"
-                                    href="index.html">Login</a>
+                                <button class="button is-primary is-uppercase has-text-white has-text-weight-light" onclick="login(event)">Login</button>
                                 <a href="forgot-password.html" class="has-text-weight-light">Forgot Password ?</a>
                             </div>
                         </form>
                         <!--Form Register-->
                         <form class="form" id="form-register" style="display: none;">
-                            <div class="field">
+                            <div class="field" id="field-email-register">
                                 <label class="label has-text-weight-light">Email*</label>
                                 <div class="control">
-                                    <input class="input" type="email" autofocus />
+                                    <input class="input" type="email" id="emailRegister" autofocus required />
                                 </div>
                             </div>
-                            <div class="field">
+                            <div class="field" id="field-password-register">
                                 <label class="label has-text-weight-light">Password*</label>
                                 <div class="control">
-                                    <input class="input" type="password" />
+                                    <input class="input" type="password" id="passwordRegister" required />
                                 </div>
                             </div>
-                            <div class="field">
+                            <div class="field" id="field-confirm-password">
                                 <label class="label has-text-weight-light">Confirm Password*</label>
                                 <div class="control">
-                                    <input class="input" type="password" />
+                                    <input class="input" type="password" id="confirmPassword" required />
                                 </div>
                             </div>
-                            <a class="button is-primary is-uppercase has-text-white has-text-weight-light" href="login.html">Register</a>
+                            <button class="button is-primary is-uppercase has-text-white has-text-weight-light" onclick="register(event)">Register</button>
                         </form>
                     </div>
                 </section>

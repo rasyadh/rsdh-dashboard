@@ -19,29 +19,29 @@
     <!--Main Sidebar-->
     <div class="main-sidebar">
         <div class="sidebar-brand">
-            <a href="/">
+            <a href="index.html">
                 <img src="img/ic_logo.svg" alt="logo">
             </a>
         </div>
         <div class="sidebar-inner">
             <ul class="icon-menu">
                 <li>
-                    <a href="/">
-                        <span class="icon has-text-grey">
+                    <a href="index.html">
+                        <span class="icon has-text-grey" title="Overview">
                             <ion-icon name="stats" size="large"></ion-icon>
                         </span>
                     </a>
                 </li>
                 <li>
                     <a href="document.html">
-                        <span class="icon has-text-grey">
+                        <span class="icon has-text-grey" title="Document">
                             <ion-icon name="document" size="large"></ion-icon>
                         </span>
                     </a>
                 </li>
                 <li>
                     <a href="chart.html">
-                        <span class="icon has-text-grey">
+                        <span class="icon has-text-grey" title="Chart">
                             <ion-icon name="pie" size="large"></ion-icon>
                         </span>
                     </a>
@@ -52,34 +52,59 @@
 
     <!--Main Navbar-->
     <div class="main-navbar">
-        <div class="navbar-brand">
-            <a class="subtitle has-text-weight-light" href="/">RSDH Dashboard</a>
-        </div>
-        <div class="navbar-inner">
-            <ul class="icon-menu">
-                <li>
-                    <a href="account.html">
-                        <span class="icon has-text-grey">
-                            <ion-icon name="person" size="large"></ion-icon>
-                        </span>
+        <nav class="navbar is-transparent" role="navigation">
+            <div class="container">
+                <div class="navbar-brand">
+                    <div class="navbar-item">
+                        <h1 class="title is-5 has-text-weight-light">RSDH Dashboard</h1>
+                    </div>
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navmenu">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
                     </a>
-                </li>
-                <li>
-                    <a>
-                        <span class="icon has-text-grey">
-                            <ion-icon name="notifications" size="large"></ion-icon>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <span class="icon has-text-grey">
-                            <ion-icon name="search" size="large"></ion-icon>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+                </div>
+                <div class="navbar-menu" id="navmenu">
+                    <div class="navbar-end is-hidden-mobile">
+                        <a class="navbar-item has-nav-spaced">
+                            <span class="icon has-text-grey" title="Search">
+                                <ion-icon name="search" size="large"></ion-icon>
+                            </span>
+                        </a>
+                        <a class="navbar-item has-nav-spaced">
+                            <span class="icon has-text-grey" title="Notifications">
+                                <ion-icon name="notifications" size="large"></ion-icon>
+                            </span>
+                        </a>
+                        <a class="navbar-item has-nav-spaced" href="account.html">
+                            <span class="icon has-text-grey" title="Profile">
+                                <ion-icon name="person" size="large"></ion-icon>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="navbar-end is-hidden-desktop">
+                        <a class="navbar-item has-nav-spaced">
+                            <span class="icon has-text-grey">
+                                <ion-icon name="search"></ion-icon>
+                            </span>
+                            <span>Search</span>
+                        </a>
+                        <a class="navbar-item has-nav-spaced">
+                            <span class="icon has-text-grey">
+                                <ion-icon name="notifications"></ion-icon>
+                            </span>
+                            <span>Notifications</span>
+                        </a>
+                        <a class="navbar-item has-nav-spaced" href="account.html">
+                            <span class="icon has-text-grey">
+                                <ion-icon name="person"></ion-icon>
+                            </span>
+                            <span>Profile</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </div>
 
     <!--Main Wrapper-->
