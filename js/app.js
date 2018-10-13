@@ -89,3 +89,10 @@ function forgotPassword(event) {
         }
     }
 }
+
+function uploadFile() {
+    let file = document.querySelector('#cover');
+    if (file.files.length > 0) {
+        document.querySelector('#file-name').innerHTML = file.files[0].name;
+    }
+}

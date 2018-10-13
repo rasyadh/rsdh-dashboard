@@ -32,14 +32,14 @@
                         </span>
                     </a>
                 </li>
-                <li class="is-active">
+                <li>
                     <a href="document.html">
                         <span class="icon has-text-grey" title="Document">
                             <ion-icon name="document" size="large"></ion-icon>
                         </span>
                     </a>
                 </li>
-                <li>
+                <li class="is-active">
                     <a href="collection.html">
                         <span class="icon has-text-grey" title="Collection">
                             <ion-icon name="bookmarks" size="large"></ion-icon>
@@ -112,92 +112,98 @@
         <div class="section">
             <div class="container">
                 <div class="main-header">
-                    <h1 class="title is-4 is-uppercase has-text-weight-light">Document</h1>
+                    <h1 class="title is-4 is-uppercase has-text-weight-light">Collection</h1>
                 </div>
                 <div class="box">
                     <div class="box-wrapper">
-                        <form class="form">
-                            <div class="columns">
-                                <div class="column">
-                                    <div class="field">
-                                        <div class="file is-centered is-boxed has-name">
-                                            <label class="file-label">
-                                                <input class="file-input" type="file" name="cover" id="cover" onchange="uploadFile()">
-                                                <span class="file-cta">
-                                                    <span class="file-icon">
-                                                        <ion-icon name="image"></ion-icon>
-                                                    </span>
-                                                    <span class="file-label">
-                                                        Choose a book cover...
-                                                    </span>
+                        <table class="table is-fullwidth is-hoverable">
+                            <thead>
+                                <tr>
+                                    <th>Book ID</th>
+                                    <th>Book Name</th>
+                                    <th>Author</th>
+                                    <th>Type of Book</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>FF001</td>
+                                    <td>The Little Prince</td>
+                                    <td>Antoine de Saint-Exupéry</td>
+                                    <td>Fiction</td>
+                                    <td>
+                                        <div class="buttons">
+                                            <span class="button is-success">
+                                                <span class="icon">
+                                                    <ion-icon name="information-circle"></ion-icon>
                                                 </span>
-                                                <span class="file-name" id="file-name">
-                                                    File name
+                                            </span>
+                                            <span class="button is-warning">
+                                                <span class="icon has-text-white">
+                                                    <ion-icon name="create"></ion-icon>
                                                 </span>
-                                            </label>
+                                            </span>
+                                            <span class="button is-danger">
+                                                <span class="icon">
+                                                    <ion-icon name="trash"></ion-icon>
+                                                </span>
+                                            </span>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="field">
-                                        <label class="label">Book Name</label>
-                                        <div class="control">
-                                            <input class="input" type="text" autofocus required />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>NF001</td>
+                                    <td>Nyanyi Sunyi Seorang Bisu 1</td>
+                                    <td>Pramoedya Ananta Toer</td>
+                                    <td>Non-Fiction</td>
+                                    <td>
+                                        <div class="buttons">
+                                            <span class="button is-success">
+                                                <span class="icon">
+                                                    <ion-icon name="information-circle"></ion-icon>
+                                                </span>
+                                            </span>
+                                            <span class="button is-warning">
+                                                <span class="icon has-text-white">
+                                                    <ion-icon name="create"></ion-icon>
+                                                </span>
+                                            </span>
+                                            <span class="button is-danger">
+                                                <span class="icon">
+                                                    <ion-icon name="trash"></ion-icon>
+                                                </span>
+                                            </span>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="columns">
-                                <div class="column">
-                                    <div class="field">
-                                        <label class="label">Author</label>
-                                        <div class="control">
-                                            <input class="input" type="text" autofocus required />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>FF002</td>
+                                    <td>Inteligensi Embun Pagi</td>
+                                    <td>Dee Lestari</td>
+                                    <td>Fiction</td>
+                                    <td>
+                                        <div class="buttons">
+                                            <span class="button is-success">
+                                                <span class="icon">
+                                                    <ion-icon name="information-circle"></ion-icon>
+                                                </span>
+                                            </span>
+                                            <span class="button is-warning">
+                                                <span class="icon has-text-white">
+                                                    <ion-icon name="create"></ion-icon>
+                                                </span>
+                                            </span>
+                                            <span class="button is-danger">
+                                                <span class="icon">
+                                                    <ion-icon name="trash"></ion-icon>
+                                                </span>
+                                            </span>
                                         </div>
-                                    </div>
-                                    <div class="field">
-                                        <label class="label">Phone Number</label>
-                                        <div class="control">
-                                            <input class="input" type="number" required />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="field">
-                                        <label class="label">Email</label>
-                                        <div class="control">
-                                            <input class="input" type="email" autofocus required />
-                                        </div>
-                                    </div>
-                                    <div class="field">
-                                        <label class="label">Type of Book</label>
-                                        <div class="control">
-                                            <div class="select is-fullwidth">
-                                                <select required>
-                                                    <option>Non-Fiction</option>
-                                                    <option>Fiction</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <label class="label">Synopsis</label>
-                                <div class="control">
-                                    <textarea class="textarea" required></textarea>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="control">
-                                    <label class="checkbox">
-                                        <input type="checkbox" required>
-                                        I agree to the <a href="#">terms and conditions</a>
-                                    </label>
-                                </div>
-                            </div>
-                            <button class="button is-primary is-fullwidth">Submit</button>
-                        </form>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
