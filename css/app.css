@@ -203,4 +203,56 @@ body {
     .auth-form-wrapper {
         padding: 0 1.5rem;
     }
+
+    /**
+    Main Navbar
+    **/
+    .main-navbar {
+        height: 60px;
+        width: calc(100% - 60px);
+        margin-left: 60px;
+    }
+
+    .main-navbar .navbar-brand {
+        height: 60px;
+    }
+
+    /**
+        Sidebar
+    **/
+    .main-sidebar {
+        height: 100%;
+        width: 60px;
+    }
+
+    .main-sidebar .sidebar-brand {
+        width: 60px;
+        height: 60px;
+    }
+
+    .main-sidebar .sidebar-brand img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .main-sidebar .sidebar-inner {
+        height: 100%;
+        width: 100%;
+    }
+
+    .main-sidebar .sidebar-inner .icon-menu li {
+        width: 60px;
+        height: 60px;
+    }
+
+    .main-sidebar .sidebar-inner .icon-menu li a {
+        max-height: 20px;
+    }
+
+    .main-wrapper {
+        height: calc(100% -60px);
+        min-height: 100vh;
+        width: calc(100% - 60px);
+        margin: 60px 0 0 60px;
+    }
 }
