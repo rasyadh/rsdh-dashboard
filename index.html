@@ -8,11 +8,9 @@
     <link rel="shortcut icon" href="favicon.png" type="image/png">
     <title>RSDH Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
     <link rel="stylesheet" href="theme/css/theme.css">
     <link rel="stylesheet" href="css/app.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
-    <script src="js/app.js"></script>
 </head>
 
 <body>
@@ -176,9 +174,102 @@
                         </div>
                     </div>
                 </div>
+                <div class="columns">
+                    <div class="column is-6">
+                        <div class="box">
+                            <h1 class="title has-text-weight-light">Sales Report</h1>
+                            <canvas id="canvas_line"></canvas>
+                        </div>
+                        <div class="box">
+                            <h1 class="title has-text-weight-light">Book Genre Report</h1>
+                            <canvas id="canvas_doughnut"></canvas>
+                        </div>
+                    </div>
+                    <div class="column is-6">
+                        <div class="box">
+                            <h1 class="title has-text-weight-light">Book Type Report</h1>
+                            <canvas id="canvas_bar"></canvas>
+                        </div>
+                        <div class="box">
+                            <h1 class="title has-text-weight-light">Production Report</h1>
+                            <canvas id="canvas_pie"></canvas>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+        const ctxLine = document.querySelector('#canvas_line').getContext('2d');
+        const ctxBar = document.querySelector('#canvas_bar').getContext('2d');
+        const ctxDoughnut = document.querySelector('#canvas_doughnut').getContext('2d');
+        const ctxPie = document.querySelector('#canvas_pie').getContext('2d');
+        const colors = [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+        ];
+
+        function getColor(colors) {
+            return Math.floor(Math.random() * Math.floor(colors));
+        }
+
+        function chartConfig(type, labels, label, data, color = 'rgba(54, 162, 235, 0.2)') {
+            return {
+                type: type,
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: label,
+                        data: data,
+                        backgroundColor: color,
+                        borderColor: color,
+                        borderWidth: 1
+                    }]
+                }
+            }
+        }
+
+        let chartLine = new Chart(ctxLine, chartConfig(
+            'line',
+            ["January", "February", "March", "April", "May", "June"],
+            'Month Sales',
+            [324, 419, 344, 504, 221, 353],
+            colors[getColor(colors.length)]
+        ));
+
+        let chartBar = new Chart(ctxBar, chartConfig(
+            'bar',
+            ["Fiction", "Non-Fiction"],
+            'Book Type',
+            [1237, 568],
+            colors[getColor(colors.length)]
+        ));
+
+        let chartDoughnut = new Chart(ctxDoughnut, chartConfig(
+            'doughnut',
+            ["Fiction", "Non-Fiction"],
+            '',
+            [1237, 568],
+            [colors[getColor(colors.length)], colors[getColor(colors.length)]]
+        ));
+
+        let chartPie = new Chart(ctxPie, chartConfig(
+            'pie',
+            ["Stock", "Sold"],
+            'Production',
+            [23528, 18358],
+            [colors[getColor(colors.length)], colors[getColor(colors.length)]]
+        ));
+    </script>
 </body>
 
 </html>
