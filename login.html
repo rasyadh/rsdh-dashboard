@@ -80,16 +80,23 @@
                                 </div>
                             </div>
                             <div class="submit-wrapper">
-                                <button class="button is-primary is-uppercase has-text-white has-text-weight-light" onclick="login(event)">Login</button>
+                                <button class="button is-primary is-uppercase has-text-white has-text-weight-light"
+                                    onclick="login(event)">Login</button>
                                 <a href="forgot-password.html" class="has-text-weight-light">Forgot Password ?</a>
                             </div>
                         </form>
                         <!--Form Register-->
                         <form class="form" id="form-register" style="display: none;">
+                            <div class="field" id="field-name">
+                                <label class="label has-text-weight-light">Name*</label>
+                                <div class="control">
+                                    <input class="input" type="text" id="nameRegister" autofocus required />
+                                </div>
+                            </div>
                             <div class="field" id="field-email-register">
                                 <label class="label has-text-weight-light">Email*</label>
                                 <div class="control">
-                                    <input class="input" type="email" id="emailRegister" autofocus required />
+                                    <input class="input" type="email" id="emailRegister" required />
                                 </div>
                             </div>
                             <div class="field" id="field-password-register">

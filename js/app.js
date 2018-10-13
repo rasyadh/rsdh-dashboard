@@ -50,15 +50,20 @@ function login(event) {
 
 function register(event) {
     event.preventDefault();
+    let name = document.querySelector('#nameRegister');
     let email = document.querySelector('#emailRegister');
     let password = document.querySelector('#passwordRegister');
     let confirmPassword = document.querySelector('#confirmPassword');
 
-    if (email.value != '' && password.value != '' && confirmPassword.value != '') {
+    if (name.value != '' && email.value != '' && password.value != '' && confirmPassword.value != '') {
         alert('User registered.');
         window.open('login.html', '_self');
     }
     else {
+        if (name.value == '') {
+            name.classList.add('is-danger');
+            document.querySelector('#field-name').innerHTML += '<p class="help is-danger">This name cannot be empty!</p>';
+        }
         if (email.value == '') {
             email.classList.add('is-danger');
             document.querySelector('#field-email-register').innerHTML += '<p class="help is-danger">This email cannot be empty!</p>';
