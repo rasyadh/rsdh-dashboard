@@ -63,7 +63,7 @@
                     </a>
                 </div>
                 <div class="navbar-menu" id="navmenu">
-                    <div class="navbar-end is-hidden-mobile">
+                    <div class="navbar-end is-hidden-mobile is-hidden-touch">
                         <a class="navbar-item has-nav-spaced">
                             <div class="control has-icons-right">
                                 <input class="input is-shadowless" type="text" />
@@ -72,11 +72,26 @@
                                 </span>
                             </div>
                         </a>
-                        <a class="navbar-item has-nav-spaced">
+                        <div class="navbar-item is-hoverable has-nav-spaced">
                             <span class="icon has-text-grey" title="Notifications">
                                 <ion-icon name="notifications" size="large"></ion-icon>
                             </span>
-                        </a>
+                            <div class="navbar-dropdown">
+                                <a class="navbar-item">
+                                    Notifications
+                                </a>
+                                <hr class="navbar-divider">
+                                <a class="navbar-item">
+                                    Notifications A
+                                </a>
+                                <a class="navbar-item">
+                                    Notifications B
+                                </a>
+                                <a class="navbar-item">
+                                    Notifications C
+                                </a>
+                            </div>
+                        </div>
                         <a class="navbar-item has-nav-spaced" href="account.html">
                             <span class="icon has-text-grey" title="Profile">
                                 <ion-icon name="person" size="large"></ion-icon>
