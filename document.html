@@ -53,6 +53,11 @@
         <nav class="navbar is-transparent" role="navigation">
             <div class="container">
                 <div class="navbar-brand">
+                    <a role="button" class="navbar-item is-hidden-desktop is-hidden-tablet" id="toggle-sidebar">
+                        <span class="icon has-text-grey" title="sidebar">
+                            <ion-icon name="list" size="large"></ion-icon>
+                        </span>
+                    </a>
                     <div class="navbar-item">
                         <h1 class="title is-5 has-text-weight-light">RSDH Dashboard</h1>
                     </div>
@@ -72,26 +77,11 @@
                                 </span>
                             </div>
                         </a>
-                        <div class="navbar-item is-hoverable has-nav-spaced">
+                        <a class="navbar-item has-nav-spaced">
                             <span class="icon has-text-grey" title="Notifications">
                                 <ion-icon name="notifications" size="large"></ion-icon>
                             </span>
-                            <div class="navbar-dropdown">
-                                <a class="navbar-item">
-                                    Notifications
-                                </a>
-                                <hr class="navbar-divider">
-                                <a class="navbar-item">
-                                    Notifications A
-                                </a>
-                                <a class="navbar-item">
-                                    Notifications B
-                                </a>
-                                <a class="navbar-item">
-                                    Notifications C
-                                </a>
-                            </div>
-                        </div>
+                        </a>
                         <a class="navbar-item has-nav-spaced" href="account.html">
                             <span class="icon has-text-grey" title="Profile">
                                 <ion-icon name="person" size="large"></ion-icon>
@@ -127,96 +117,94 @@
 
     <!--Main Wrapper-->
     <div class="main-wrapper">
-        <div class="section">
-            <div class="container">
-                <div class="main-header">
-                    <h1 class="title is-4 is-uppercase has-text-weight-light">Document</h1>
-                </div>
-                <div class="box">
-                    <div class="box-wrapper">
-                        <form class="form" enctype="multipart/form-data">
-                            <div class="columns">
-                                <div class="column">
-                                    <div class="field">
-                                        <div class="file is-centered is-boxed has-name">
-                                            <label class="file-label">
-                                                <input class="file-input" type="file" name="cover" id="cover" onchange="uploadFile()">
-                                                <span class="file-cta">
-                                                    <span class="file-icon">
-                                                        <ion-icon name="image"></ion-icon>
-                                                    </span>
-                                                    <span class="file-label">
-                                                        Choose a book cover...
-                                                    </span>
+        <div class="container">
+            <div class="main-header">
+                <h1 class="title is-4 is-uppercase has-text-weight-light">Document</h1>
+            </div>
+            <div class="box">
+                <div class="box-wrapper">
+                    <form class="form" enctype="multipart/form-data">
+                        <div class="columns">
+                            <div class="column">
+                                <div class="field">
+                                    <div class="file is-centered is-boxed has-name">
+                                        <label class="file-label">
+                                            <input class="file-input" type="file" name="cover" id="cover" onchange="uploadFile()">
+                                            <span class="file-cta">
+                                                <span class="file-icon">
+                                                    <ion-icon name="image"></ion-icon>
                                                 </span>
-                                                <span class="file-name" id="file-name">
-                                                    File name
+                                                <span class="file-label">
+                                                    Choose a book cover...
                                                 </span>
-                                            </label>
-                                        </div>
+                                            </span>
+                                            <span class="file-name" id="file-name">
+                                                File name
+                                            </span>
+                                        </label>
                                     </div>
                                 </div>
-                                <div class="column">
-                                    <div class="field">
-                                        <label class="label">Book Name</label>
-                                        <div class="control">
-                                            <input class="input" type="text" autofocus required />
+                            </div>
+                            <div class="column">
+                                <div class="field">
+                                    <label class="label">Book Name</label>
+                                    <div class="control">
+                                        <input class="input" type="text" autofocus required />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <div class="field">
+                                    <label class="label">Author</label>
+                                    <div class="control">
+                                        <input class="input" type="text" autofocus required />
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Phone Number</label>
+                                    <div class="control">
+                                        <input class="input" type="number" required />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="field">
+                                    <label class="label">Email</label>
+                                    <div class="control">
+                                        <input class="input" type="email" autofocus required />
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label class="label">Type of Book</label>
+                                    <div class="control">
+                                        <div class="select is-fullwidth">
+                                            <select required>
+                                                <option>Non-Fiction</option>
+                                                <option>Fiction</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="columns">
-                                <div class="column">
-                                    <div class="field">
-                                        <label class="label">Author</label>
-                                        <div class="control">
-                                            <input class="input" type="text" autofocus required />
-                                        </div>
-                                    </div>
-                                    <div class="field">
-                                        <label class="label">Phone Number</label>
-                                        <div class="control">
-                                            <input class="input" type="number" required />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column">
-                                    <div class="field">
-                                        <label class="label">Email</label>
-                                        <div class="control">
-                                            <input class="input" type="email" autofocus required />
-                                        </div>
-                                    </div>
-                                    <div class="field">
-                                        <label class="label">Type of Book</label>
-                                        <div class="control">
-                                            <div class="select is-fullwidth">
-                                                <select required>
-                                                    <option>Non-Fiction</option>
-                                                    <option>Fiction</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Synopsis</label>
+                            <div class="control">
+                                <textarea class="textarea" required></textarea>
                             </div>
-                            <div class="field">
-                                <label class="label">Synopsis</label>
-                                <div class="control">
-                                    <textarea class="textarea" required></textarea>
-                                </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <label class="checkbox">
+                                    <input type="checkbox" required>
+                                    I agree to the <a href="#">terms and conditions</a>
+                                </label>
                             </div>
-                            <div class="field">
-                                <div class="control">
-                                    <label class="checkbox">
-                                        <input type="checkbox" required>
-                                        I agree to the <a href="#">terms and conditions</a>
-                                    </label>
-                                </div>
-                            </div>
-                            <button class="button is-primary is-fullwidth">Submit</button>
-                        </form>
-                    </div>
+                        </div>
+                        <button class="button is-primary is-fullwidth">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>

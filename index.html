@@ -53,6 +53,11 @@
         <nav class="navbar is-transparent" role="navigation">
             <div class="container">
                 <div class="navbar-brand">
+                    <a role="button" class="navbar-item is-hidden-desktop is-hidden-tablet" id="toggle-sidebar">
+                        <span class="icon has-text-grey" title="sidebar">
+                            <ion-icon name="list" size="large"></ion-icon>
+                        </span>
+                    </a>
                     <div class="navbar-item">
                         <h1 class="title is-5 has-text-weight-light">RSDH Dashboard</h1>
                     </div>
@@ -72,26 +77,11 @@
                                 </span>
                             </div>
                         </a>
-                        <div class="navbar-item is-hoverable has-nav-spaced">
+                        <a class="navbar-item has-nav-spaced">
                             <span class="icon has-text-grey" title="Notifications">
                                 <ion-icon name="notifications" size="large"></ion-icon>
                             </span>
-                            <div class="navbar-dropdown">
-                                <a class="navbar-item">
-                                    Notifications
-                                </a>
-                                <hr class="navbar-divider">
-                                <a class="navbar-item">
-                                    Notifications A
-                                </a>
-                                <a class="navbar-item">
-                                    Notifications B
-                                </a>
-                                <a class="navbar-item">
-                                    Notifications C
-                                </a>
-                            </div>
-                        </div>
+                        </a>
                         <a class="navbar-item has-nav-spaced" href="account.html">
                             <span class="icon has-text-grey" title="Profile">
                                 <ion-icon name="person" size="large"></ion-icon>
@@ -127,93 +117,91 @@
 
     <!--Main Wrapper-->
     <div class="main-wrapper">
-        <div class="section">
-            <div class="container">
-                <div class="main-header">
-                    <h1 class="title is-4 is-uppercase has-text-weight-light">Overview</h1>
-                </div>
-                <div class="columns">
-                    <div class="column is-3">
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <span class="icon is-large has-text-primary">
-                                        <ion-icon name="book" size="large"></ion-icon>
-                                    </span>
-                                </div>
-                                <div class="media-content">
-                                    <h1 class="title has-text-weight-light">3</h1>
-                                    <h2 class="subtitle has-text-weight-light"><small>Book</small></h2>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="column is-3">
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <span class="icon is-large has-text-success">
-                                        <ion-icon name="people" size="large"></ion-icon>
-                                    </span>
-                                </div>
-                                <div class="media-content">
-                                    <h1 class="title has-text-weight-light">3</h1>
-                                    <h2 class="subtitle has-text-weight-light"><small>Author</small></h2>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="column is-3">
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <span class="icon is-large has-text-warning">
-                                        <ion-icon name="color-wand" size="large"></ion-icon>
-                                    </span>
-                                </div>
-                                <div class="media-content">
-                                    <h1 class="title has-text-weight-light">2</h1>
-                                    <h2 class="subtitle has-text-weight-light"><small>Fiction</small></h2>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="column is-3">
-                        <div class="box">
-                            <article class="media">
-                                <div class="media-left">
-                                    <span class="icon is-large has-text-danger">
-                                        <ion-icon name="quote" size="large"></ion-icon>
-                                    </span>
-                                </div>
-                                <div class="media-content">
-                                    <h1 class="title has-text-weight-light">1</h1>
-                                    <h2 class="subtitle has-text-weight-light"><small>Non-Fiction</small></h2>
-                                </div>
-                            </article>
-                        </div>
+        <div class="container">
+            <div class="main-header">
+                <h1 class="title is-4 is-uppercase has-text-weight-light">Overview</h1>
+            </div>
+            <div class="columns">
+                <div class="column is-3">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <span class="icon is-large has-text-primary">
+                                    <ion-icon name="book" size="large"></ion-icon>
+                                </span>
+                            </div>
+                            <div class="media-content">
+                                <h1 class="title has-text-weight-light">3</h1>
+                                <h2 class="subtitle has-text-weight-light"><small>Book</small></h2>
+                            </div>
+                        </article>
                     </div>
                 </div>
-                <div class="columns">
-                    <div class="column is-6">
-                        <div class="box">
-                            <h1 class="title has-text-weight-light">Sales Report</h1>
-                            <canvas id="canvas_line"></canvas>
-                        </div>
-                        <div class="box">
-                            <h1 class="title has-text-weight-light">Book Genre Report</h1>
-                            <canvas id="canvas_doughnut"></canvas>
-                        </div>
+                <div class="column is-3">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <span class="icon is-large has-text-success">
+                                    <ion-icon name="people" size="large"></ion-icon>
+                                </span>
+                            </div>
+                            <div class="media-content">
+                                <h1 class="title has-text-weight-light">3</h1>
+                                <h2 class="subtitle has-text-weight-light"><small>Author</small></h2>
+                            </div>
+                        </article>
                     </div>
-                    <div class="column is-6">
-                        <div class="box">
-                            <h1 class="title has-text-weight-light">Book Type Report</h1>
-                            <canvas id="canvas_bar"></canvas>
-                        </div>
-                        <div class="box">
-                            <h1 class="title has-text-weight-light">Production Report</h1>
-                            <canvas id="canvas_pie"></canvas>
-                        </div>
+                </div>
+                <div class="column is-3">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <span class="icon is-large has-text-warning">
+                                    <ion-icon name="color-wand" size="large"></ion-icon>
+                                </span>
+                            </div>
+                            <div class="media-content">
+                                <h1 class="title has-text-weight-light">2</h1>
+                                <h2 class="subtitle has-text-weight-light"><small>Fiction</small></h2>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="column is-3">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <span class="icon is-large has-text-danger">
+                                    <ion-icon name="quote" size="large"></ion-icon>
+                                </span>
+                            </div>
+                            <div class="media-content">
+                                <h1 class="title has-text-weight-light">1</h1>
+                                <h2 class="subtitle has-text-weight-light"><small>Non-Fiction</small></h2>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-6">
+                    <div class="box">
+                        <h1 class="subtitle has-text-weight-light">Sales Report</h1>
+                        <canvas id="canvas_line"></canvas>
+                    </div>
+                    <div class="box">
+                        <h1 class="subtitle has-text-weight-light">Book Genre Report</h1>
+                        <canvas id="canvas_doughnut"></canvas>
+                    </div>
+                </div>
+                <div class="column is-6">
+                    <div class="box">
+                        <h1 class="subtitle has-text-weight-light">Book Type Report</h1>
+                        <canvas id="canvas_bar"></canvas>
+                    </div>
+                    <div class="box">
+                        <h1 class="subtitle has-text-weight-light">Production Report</h1>
+                        <canvas id="canvas_pie"></canvas>
                     </div>
                 </div>
             </div>

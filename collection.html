@@ -53,6 +53,11 @@
         <nav class="navbar is-transparent" role="navigation">
             <div class="container">
                 <div class="navbar-brand">
+                    <a role="button" class="navbar-item is-hidden-desktop is-hidden-tablet" id="toggle-sidebar">
+                        <span class="icon has-text-grey" title="sidebar">
+                            <ion-icon name="list" size="large"></ion-icon>
+                        </span>
+                    </a>
                     <div class="navbar-item">
                         <h1 class="title is-5 has-text-weight-light">RSDH Dashboard</h1>
                     </div>
@@ -72,26 +77,11 @@
                                 </span>
                             </div>
                         </a>
-                        <div class="navbar-item is-hoverable has-nav-spaced">
+                        <a class="navbar-item has-nav-spaced">
                             <span class="icon has-text-grey" title="Notifications">
                                 <ion-icon name="notifications" size="large"></ion-icon>
                             </span>
-                            <div class="navbar-dropdown">
-                                <a class="navbar-item">
-                                    Notifications
-                                </a>
-                                <hr class="navbar-divider">
-                                <a class="navbar-item">
-                                    Notifications A
-                                </a>
-                                <a class="navbar-item">
-                                    Notifications B
-                                </a>
-                                <a class="navbar-item">
-                                    Notifications C
-                                </a>
-                            </div>
-                        </div>
+                        </a>
                         <a class="navbar-item has-nav-spaced" href="account.html">
                             <span class="icon has-text-grey" title="Profile">
                                 <ion-icon name="person" size="large"></ion-icon>
@@ -127,103 +117,101 @@
 
     <!--Main Wrapper-->
     <div class="main-wrapper">
-        <div class="section">
-            <div class="container">
-                <div class="main-header">
-                    <h1 class="title is-4 is-uppercase has-text-weight-light">Collection</h1>
-                </div>
-                <div class="box">
-                    <div class="box-wrapper">
-                        <div class="table-wrapper">
-                            <table class="table is-fullwidth is-hoverable">
-                                <thead>
-                                    <tr>
-                                        <th>Book ID</th>
-                                        <th>Book Name</th>
-                                        <th>Author</th>
-                                        <th>Type of Book</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>FF001</td>
-                                        <td>The Little Prince</td>
-                                        <td>Antoine de Saint-Exupéry</td>
-                                        <td>Fiction</td>
-                                        <td>
-                                            <div class="buttons">
-                                                <span class="button is-success">
-                                                    <span class="icon">
-                                                        <ion-icon name="information-circle"></ion-icon>
-                                                    </span>
+        <div class="container">
+            <div class="main-header">
+                <h1 class="title is-4 is-uppercase has-text-weight-light">Collection</h1>
+            </div>
+            <div class="box">
+                <div class="box-wrapper">
+                    <div class="table-wrapper">
+                        <table class="table is-fullwidth is-hoverable">
+                            <thead>
+                                <tr>
+                                    <th>Book ID</th>
+                                    <th>Book Name</th>
+                                    <th>Author</th>
+                                    <th>Type of Book</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>FF001</td>
+                                    <td>The Little Prince</td>
+                                    <td>Antoine de Saint-Exupéry</td>
+                                    <td>Fiction</td>
+                                    <td>
+                                        <div class="buttons">
+                                            <span class="button is-success">
+                                                <span class="icon">
+                                                    <ion-icon name="information-circle"></ion-icon>
                                                 </span>
-                                                <span class="button is-warning">
-                                                    <span class="icon has-text-white">
-                                                        <ion-icon name="create"></ion-icon>
-                                                    </span>
+                                            </span>
+                                            <span class="button is-warning">
+                                                <span class="icon has-text-white">
+                                                    <ion-icon name="create"></ion-icon>
                                                 </span>
-                                                <span class="button is-danger">
-                                                    <span class="icon">
-                                                        <ion-icon name="trash"></ion-icon>
-                                                    </span>
+                                            </span>
+                                            <span class="button is-danger">
+                                                <span class="icon">
+                                                    <ion-icon name="trash"></ion-icon>
                                                 </span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>NF001</td>
-                                        <td>Nyanyi Sunyi Seorang Bisu 1</td>
-                                        <td>Pramoedya Ananta Toer</td>
-                                        <td>Non-Fiction</td>
-                                        <td>
-                                            <div class="buttons">
-                                                <span class="button is-success">
-                                                    <span class="icon">
-                                                        <ion-icon name="information-circle"></ion-icon>
-                                                    </span>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>NF001</td>
+                                    <td>Nyanyi Sunyi Seorang Bisu 1</td>
+                                    <td>Pramoedya Ananta Toer</td>
+                                    <td>Non-Fiction</td>
+                                    <td>
+                                        <div class="buttons">
+                                            <span class="button is-success">
+                                                <span class="icon">
+                                                    <ion-icon name="information-circle"></ion-icon>
                                                 </span>
-                                                <span class="button is-warning">
-                                                    <span class="icon has-text-white">
-                                                        <ion-icon name="create"></ion-icon>
-                                                    </span>
+                                            </span>
+                                            <span class="button is-warning">
+                                                <span class="icon has-text-white">
+                                                    <ion-icon name="create"></ion-icon>
                                                 </span>
-                                                <span class="button is-danger">
-                                                    <span class="icon">
-                                                        <ion-icon name="trash"></ion-icon>
-                                                    </span>
+                                            </span>
+                                            <span class="button is-danger">
+                                                <span class="icon">
+                                                    <ion-icon name="trash"></ion-icon>
                                                 </span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>FF002</td>
-                                        <td>Inteligensi Embun Pagi</td>
-                                        <td>Dee Lestari</td>
-                                        <td>Fiction</td>
-                                        <td>
-                                            <div class="buttons">
-                                                <span class="button is-success">
-                                                    <span class="icon">
-                                                        <ion-icon name="information-circle"></ion-icon>
-                                                    </span>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>FF002</td>
+                                    <td>Inteligensi Embun Pagi</td>
+                                    <td>Dee Lestari</td>
+                                    <td>Fiction</td>
+                                    <td>
+                                        <div class="buttons">
+                                            <span class="button is-success">
+                                                <span class="icon">
+                                                    <ion-icon name="information-circle"></ion-icon>
                                                 </span>
-                                                <span class="button is-warning">
-                                                    <span class="icon has-text-white">
-                                                        <ion-icon name="create"></ion-icon>
-                                                    </span>
+                                            </span>
+                                            <span class="button is-warning">
+                                                <span class="icon has-text-white">
+                                                    <ion-icon name="create"></ion-icon>
                                                 </span>
-                                                <span class="button is-danger">
-                                                    <span class="icon">
-                                                        <ion-icon name="trash"></ion-icon>
-                                                    </span>
+                                            </span>
+                                            <span class="button is-danger">
+                                                <span class="icon">
+                                                    <ion-icon name="trash"></ion-icon>
                                                 </span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

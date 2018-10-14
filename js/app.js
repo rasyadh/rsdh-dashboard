@@ -1,28 +1,47 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-        // Add a click event on each of them
-        $navbarBurgers.forEach(el => {
-            el.addEventListener('click', () => {
-                // Get the target from the "data-target" attribute
-                const target = el.dataset.target;
-                const $target = document.getElementById(target);
-                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                el.classList.toggle('is-active');
-                $target.classList.toggle('is-active');
-            });
-        });
-    }
+$(document).ready(function () {
+    // Check for click events on the navbar burger icon
+    $('.navbar-burger').click(function () {
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        $('.navbar-burger').toggleClass('is-active');
+        $('.navbar-menu').toggleClass('is-active');
+    });
+
+    $('#toggle-sidebar').click(() => {
+        let sidebar = $('.main-sidebar');
+        let navbar = $('.main-navbar');
+        let main = $('.main-wrapper');
+        let icons = $('.main-sidebar .sidebar-inner .icon-menu li a');
+        let isActive = $('.icon-menu .is-active');
+
+        if (sidebar.hasClass('is-active')) {
+            sidebar.width('0px');
+            icons.hide();
+            isActive.css({'border-right': '0'});
+            navbar.width('100%');
+            navbar.css({'margin-left': '0px'});
+            main.width('auto');
+            main.css({'margin': '60px 0 0 0'});
+            sidebar.removeClass('is-active');
+        }
+        else {
+            navbar.width('calc(100% - 60px)');
+            navbar.css({'margin-left': '60px'});
+            main.width('calc(100% - 60px)');
+            main.css({'margin': '60px 0 0 60px'});
+            sidebar.width('60px');
+            icons.show();
+            isActive.css({'border-right': '2px solid #0023FF'});
+            sidebar.addClass('is-active');
+        }
+    });
 });
 
 function setTabLogin(event, tabName) {
-    for (f of $('.form')) {
-        f.style.display = 'none';
+    for (form of $('.form')) {
+        form.style.display = 'none';
     }
-    for (t of $('.tab')) {
-        t.className = t.className.replace(' is-active', '');
+    for (tab of $('.tab')) {
+        tab.className = tab.className.replace(' is-active', '');
     }
     $('#' + tabName).show();
     event.currentTarget.className += ' is-active';
